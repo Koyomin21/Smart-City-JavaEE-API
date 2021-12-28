@@ -1,0 +1,96 @@
+select * from Roles;
+
+insert into Roles(rolename) values
+('ADMIN'),
+('STUDENT'),
+('TOURIST');
+
+select * from Users;
+
+insert into Users(firstName, lastName, username, password) values
+('Anuar', 'Bora', 'Anuario', '123'),
+('Elvira', 'Nuga', 'Elvantra', '123'),
+('Aldiyar', 'Ora', 'Aldibald', '123'),
+('Karim', 'Ilyasov', 'Kara', '123'),
+('Aldiyar', 'Taiga', 'Taiga', '123');
+
+select * from UsersRoles;
+insert into UsersRoles(userId, roleId) values
+(1, 1),
+(1, 2),
+(1, 3),
+(2, 2),
+(3, 3),
+(4, 2),
+(5, 3);
+
+select * from FacilityType;
+insert into FacilityType(facilitytype) values
+('University'),
+('Library'),
+('ATM'),
+('Theatre'),
+('Hotel');
+
+select * from Location;
+insert into Location(address, description) values
+('Manasa 123', 'Jandosova Manasa'),
+('Tole bi 132', 'Tole be AbilayKhana'),
+('Mukhanova 47', 'Mukhanova Karasai Batyra'),
+('Ryskulov 34', 'Best ATMs in da world!'),
+('Abay 56', 'Cool Theatre here!'),
+('Pushkin 32', 'Toje neploxoi theatre'),
+('Hotel Street 55', 'Tam gde Kazakhstan Hotel, you know'),
+('Hotel Real Street Boy 36', 'Tam gde Astana Hotel, you know');
+
+
+select * from Facility;
+insert into Facility(name, description, locationid, facilitytypeid) values
+('IITU', 'IT University. What is it you cannot unserstand?', 1, 1),
+('KBTU', 'KBTU. Sup?', 2, 1),
+('Science Library', 'This is library. You should study, my friend.', 3, 2),
+('Youth Library', 'This is library. You should learn here, comrad', 3, 2),
+('Super ATM', 'Come and change ur money!', 4, 3),
+('Abay Theatre', 'Bizdin theatrge kel, bratishka', 5, 4),
+('Big Thatre', 'Bizdin theatrge kel, bratishka. Veselo bolad', 6, 4),
+('Biggy Hotel', 'Keep the business and friendship completely separated', 7, 5),
+('Tupac Hotel', 'Dear Mama!', 8, 5);
+
+
+select * from ArticleType;
+
+
+insert into ArticleType(articletype) values
+('Tourism'),
+('Business');
+
+
+
+
+select * from Article;
+
+insert into Article(subject, description, articletypeid) values
+('Financial Pyramids', 'Do not get into this kind of moshenichestvo!', 2),
+('Global Economy', 'Due to pandemic situation, USA can no longer pay Kazakhstan 5 million horser per year.', 2),
+('Best Theatre', 'You want to visit the best theatre in da world? You should visit Abay theatre then!', 1),
+('Best Hotel', 'Well, choose Kazakhstan. Whatever', 1);
+
+select * from Vacancy
+insert into Vacancy(userid, salary, isrelevant, description) values
+(1, 400000, true, 'Molodoi i friendly team!'),
+(2, 800000, true, 'Molodoi i friendly team!'),
+(1, 500000, false, 'Come to our start up!'),
+(3, 900000, false, 'IT Giant! Come to us!');
+
+select * from JobPost;
+
+insert into JobPost(userid, salary, description) values
+(4, 600000, 'I am a professional! Best Full Stack you can find!'),
+(5, 800000, 'Senior Python Dev. Do not make jokes about my orientation!'),
+(5, 200000, 'Middle Python Dev. Do not make jokes about my mom!'),
+(null, 60, 'Dummy boy');
+
+
+
+
+
